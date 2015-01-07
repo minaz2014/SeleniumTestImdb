@@ -1,10 +1,5 @@
 package test.java.com.townscript.imdb.selenium;
 
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 import org.junit.Test;
 import org.openqa.selenium.*;
@@ -85,7 +80,6 @@ public class AddMovieTest {
 	     Assert.assertEquals(Actualtext, "CREATE NEW REVIEW");
 	     System.out.println("Title-CREATE NEW REVIEW --> Part executed");
 	      
-        //driver.findElement(By.xpath(".//*[@id='photo']")).click();   
 	     driver.findElement(By.xpath("/html/body/div/fieldset/input")).sendKeys("C:\\Users\\Townscript\\Downloads\\kick.jpg");
     
         /*setClipboardData("C:\\Users\\Townscript\\Downloads\\kick.jpg");
