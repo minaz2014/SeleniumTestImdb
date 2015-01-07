@@ -43,10 +43,10 @@ public class AddMovieTest {
 	}
 	
 	
-	public static void setClipboardData(String string) {
+	/*public static void setClipboardData(String string) {
 		   StringSelection stringSelection = new StringSelection(string);
 		   Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-		}
+		}*/
 @Test
 	public void addMovieTest(){
 		WebDriver driver = new FirefoxDriver();
@@ -85,11 +85,12 @@ public class AddMovieTest {
 	     Assert.assertEquals(Actualtext, "CREATE NEW REVIEW");
 	     System.out.println("Title-CREATE NEW REVIEW --> Part executed");
 	      
-        driver.findElement(By.xpath(".//*[@id='photo']")).click();    
+        //driver.findElement(By.xpath(".//*[@id='photo']")).click();   
+	     driver.findElement(By.xpath("/html/body/div/fieldset/input")).sendKeys("C:\\Users\\Townscript\\Downloads\\kick.jpg");
     
-        setClipboardData("C:\\Users\\Townscript\\Downloads\\kick.jpg");
-      //native key strokes for CTRL, V and ENTER keys
-      Robot robot;
+        /*setClipboardData("C:\\Users\\Townscript\\Downloads\\kick.jpg");
+        
+      Robot robot;/html/body/div/fieldset/input
 		try {
 			robot = new Robot();
 			robot.keyPress(KeyEvent.VK_CONTROL);
@@ -103,7 +104,7 @@ public class AddMovieTest {
 		    catch (AWTException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		    }
+		    }*/
         
 	      driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	      
